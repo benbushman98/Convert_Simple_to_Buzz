@@ -7,7 +7,7 @@ const path = require('path');
 
 app.use(cors());
 app.use(express.json());
-const port = process.env.PORT || 3001; //Line 3
+const port = process.env.PORT || 3002; //Line 3
 app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });
 });
