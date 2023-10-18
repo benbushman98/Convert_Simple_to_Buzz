@@ -9,14 +9,40 @@ const Home = () => {
         setSelectedFile(event.target.files[0]);
     };
 
-    const handleFileUpload = () => {
-        if (selectedFile) {
-            const formData = new FormData();
-            formData.append('file', selectedFile);
+    // const handleFileUpload = () => {
+    //     if (selectedFile) {
+    //         const formData = new FormData();
+    //         formData.append('file', selectedFile);
 
-            fetch('/api/upload', {
+    //         fetch('/api/upload', {
+    //             method: 'POST',
+    //             body: formData,
+    //         })
+    //             .then((response) => {
+    //                 if (response.ok) {
+    //                     console.log('File uploaded successfully');
+
+    //                     // Handle any success logic here
+
+    //                     // Redirect to /upload and pass information
+    //                     navigate('/upload', { state: { message: 'File uploaded successfully',fileName: selectedFile.name } });
+    //                 } else {
+    //                     console.error('File upload failed');
+    //                     // Handle any error logic here
+    //                 }
+    //             })
+    //             .catch((error) => {
+    //                 console.error('An error occurred while uploading the file', error);
+    //                 // Handle any error logic here
+    //             });
+    //     }
+    // };
+       const handleFileUpload = () => {
+      
+
+            fetch('/api/test', {
                 method: 'POST',
-                body: formData,
+                body: {test: "Hello TESTING"},
             })
                 .then((response) => {
                     if (response.ok) {
@@ -25,7 +51,6 @@ const Home = () => {
                         // Handle any success logic here
 
                         // Redirect to /upload and pass information
-                        navigate('/upload', { state: { message: 'File uploaded successfully',fileName: selectedFile.name } });
                     } else {
                         console.error('File upload failed');
                         // Handle any error logic here
@@ -35,7 +60,7 @@ const Home = () => {
                     console.error('An error occurred while uploading the file', error);
                     // Handle any error logic here
                 });
-        }
+        
     };
 
     return (
