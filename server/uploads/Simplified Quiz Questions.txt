@@ -1,0 +1,155 @@
+Simplified Quiz Questions
+
+1.
+Type: F
+Groups: quiz
+Instructions: Answer the prompt.
+Prompt: Question goes here.
+a. Expected Answer
+
+2.
+Type: MT
+Target-type: image
+Source-type: text
+Groups: quiz
+Instructions: Match the cards.
+a. Text 1 = Audio 1
+b. Text 2 = Audio 2
+c. Text 3 = Audio 3
+
+3.
+Type: MT
+Target-type: text
+Source-type: text
+Groups: quiz
+Instructions: Match the cards.
+a. Term 1 = Definition 1
+b. Term 2 = Definition 2
+c. Term 3 = Definition 3
+
+4.
+Type: MT
+Target-type: text
+Source-type: image
+Groups: quiz
+Instructions: Match the cards.
+a. Audio 1 = Text 1
+b. Audio 2 = Text 2
+c. Audio 3 = Text 3
+
+5.
+Type: MT
+Target-type: image
+Source-type: image
+Groups: quiz
+Instructions: Match the cards.
+a. Audio 1a = Audio 1b
+b. Audio 2a = Audio 2b
+c. Audio 3a = Audio 3b
+
+6.
+Type: WA
+Groups: quiz
+Instructions: Drag the words to their location on the image.
+(Desired image)
+a. Word 1 = (location on image)
+b. Word 2 = (location on image)
+c. Word 3 = (location on image)
+
+7.
+Type: MA
+Groups: quiz
+Instructions: Mark the words.
+Text: Text goes here with *an* asterisk around the *correct* words.
+
+8.
+Type: TF
+Groups: quiz
+Instructions: True or False.
+Text: True or False Statement.
+*a. True
+b. False
+
+9.
+Type: O
+Groups: quiz
+Instructions: Put the cards in the correct order.
+a. Description of Image 1
+b. Description of Image 2
+c. Description of Image 3
+
+10.
+Type: FB
+Groups: quiz
+Instructions: Fill in the blanks.
+Text: Words surrounded by *an* asterisk will appear as *blanks* to be filled in.
+
+11.
+Type: FH
+Groups: quiz
+Instructions: Click matching spots instructions
+Image: Describe Image
+a. Describe target a
+b. Describe target b
+
+12.
+Type: C
+Target-type: image
+Source-type: text
+Groups: quiz
+Instructions: Match the cards.
+Text 1 = Audio 1 description
+Text 2 = Audio 2 description
+Text 3 = Audio 3 description
+
+13.
+Type: C
+Target-type: text
+Source-type: text
+Groups: quiz
+Instructions: Match the cards.
+Text 1a = Text 1b
+Text 2a = Text 2b
+Text 3a = Text 3b
+
+14.
+Type: C
+Target-type: image
+Source-type: image
+Groups: quiz
+Instructions: Match the cards.
+Image1 = ImageG
+Image2 = ImageK
+Image3 = Image800x600
+
+15.
+Type: MC
+Groups: quiz
+Instructions: Choose ONE.
+Question: Type Question Here.
+*a. Choice 1
+b. Choice 2
+c. Choice 3
+d. Choice 4
+
+16.
+Type: MC
+Groups: quiz
+Instructions: Choose TWO.
+Question: Type Question Here
+*a. Choice 1
+b. Choice 2
+*c. Choice 3
+d. Choice 4
+
+17.
+Type: MC
+Groups: quiz
+Instructions: Choose all that apply. 
+Question: Question with multiple answers.
+*a. Choice 1
+*b. Choice 2
+c. Choice 3
+*d. Choice 4
+e. Choice 5
+*f. Choice 6

@@ -2,7 +2,7 @@ import React from 'react'
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
-const Upload = () => {
+const Convert = () => {
     const [fileData, setFileData] = useState(null);
     const location = useLocation();
     const { message, fileName } = location.state;
@@ -49,4 +49,4 @@ const Upload = () => {
     );
 };
 
-export default Upload;
+export default Convert;

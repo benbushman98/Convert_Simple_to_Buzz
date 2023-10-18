@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home'
-import Upload from './pages/upload.js'
+import Convert from './pages/convert.js'
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} >
         </Route>
-        <Route path="/upload" element={<Upload />} >
+        <Route path="/convert" element={<Convert />} >
         </Route>
       </Routes>
     </BrowserRouter>
