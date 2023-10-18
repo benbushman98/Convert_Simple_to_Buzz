@@ -33,16 +33,6 @@ const storage = multer.diskStorage({
     }
 });
 
-// Test POST route
-app.post('/api/test', (req, res) => {
-    // Access the data sent in the request body (assuming it's JSON)
-    const requestData = req.body;
-  
-    // You can perform any processing you need here with requestData
-    // For this example, we'll just send a response
-    res.json({ message: 'POST request received successfully', data: requestData });
-  });
-
 const upload = multer({ storage: storage });
 
 app.post('/api/upload', upload.single('file'), (req, res) => {
