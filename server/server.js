@@ -15,7 +15,7 @@ app.get("/api", (req, res) => {
 app.get('/api/download/:fileName', (req, res) => {
     console.log('Reached /api/download/:fileName route');
     const fileName = req.params.fileName;
-    const filePath = path.join(__dirname, 'uploads', fileName); // Adjust the directory path as needed
+    const filePath = path.join(__dirname, 'converts', fileName); // Adjust the directory path as needed
     res.download(filePath, (err) => {
         if (err) {
             // Handle any errors that occur during the download
@@ -247,7 +247,8 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
                 changeLastMCtoMA(outputData);
             }
 
-            fs.writeFileSync(outputFile, outputData.join('\n'));
+            var newPath = outputFile.replace(/^\.\/uploads\//, './converts/');
+            fs.writeFileSync(newPath, outputData.join('\n'));
 
         }
 
