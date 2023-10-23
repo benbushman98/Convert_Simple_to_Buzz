@@ -43,6 +43,7 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
         const readline = require('readline');
 
         async function processFile(inputFile) {
+            console.log(inputFile)
             const fileStream = fs.createReadStream(inputFile);
             const rl = readline.createInterface({
                 input: fileStream,
@@ -321,8 +322,8 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
             console.log("Please provide an input file as an argument.");
             process.exit(1);
         }
-
-        processFile(`./${uploadedFile.path}`);
+        const path = `./${uploadedFile.path}`
+        processFile(path);
         res.status(200).send('Success')
     } else {
         res.status(400).send('No file uploaded.');
