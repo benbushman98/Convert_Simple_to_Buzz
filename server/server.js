@@ -26,7 +26,8 @@ app.get('/api/download/:fileName', (req, res) => {
 });
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
-        callback(null, 'src'); // Define the destination folder for uploaded files
+        //callback(null, 'src'); // Define the destination folder for uploaded files
+        callback(null, './server/src'); // Define the destination folder for uploaded files
     },
     filename: (req, file, callback) => {
         callback(null, file.originalname); // Use the original filename for the uploaded file
@@ -249,7 +250,9 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
                 changeLastMCtoMA(outputData);
             }
 
-            var newPath = outputFile.replace(/^\.\/src\//, './converts/');
+            // var newPath = outputFile.replace(/^\.\/src\//, './converts/');
+            var newPath = outputFile = outputFile.replace(/^\.\/server\/src/, './server/converts');
+
             fs.writeFileSync(newPath, outputData.join('\n'));
 
         }
