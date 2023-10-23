@@ -9,12 +9,12 @@ const Home = () => {
         setSelectedFile(event.target.files[0]);
     };
 
-    const handleFileUpload = () => {
+    const handleFileUpload = async () => {
         if (selectedFile) {
             const formData = new FormData();
             formData.append('file', selectedFile);
 
-            fetch('/api/upload', {
+            await fetch('/api/upload', {
                 method: 'POST',
                 body: formData,
             })
