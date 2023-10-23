@@ -26,7 +26,7 @@ app.get('/api/download/:fileName', (req, res) => {
 });
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
-        callback(null, './uploads'); // Define the destination folder for uploaded files
+        callback(null, 'uploads'); // Define the destination folder for uploaded files
     },
     filename: (req, file, callback) => {
         callback(null, file.originalname); // Use the original filename for the uploaded file
@@ -331,7 +331,7 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
 
 });
 
-const root = require('path').join(__dirname, '../client', 'public')
+const root = require('path').join(__dirname, '../client', 'build')
 app.use(express.static(root));
 app.get("*", (req, res) => {
     res.sendFile('index.html', { root });
