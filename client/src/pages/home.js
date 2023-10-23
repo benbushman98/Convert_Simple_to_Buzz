@@ -27,7 +27,7 @@ const Home = () => {
                         // Redirect to /upload and pass information
                         navigate('/convert', { state: { message: 'File uploaded successfully',fileName: selectedFile.name } });
                     } else {
-                        console.error('File upload failed');
+                        console.error('File upload failed' + response);
                         // Handle any error logic here
                     }
                 })
