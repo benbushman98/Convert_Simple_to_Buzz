@@ -14,7 +14,7 @@ const Home = () => {
             const formData = new FormData();
             formData.append('file', selectedFile);
 
-            fetch('http://nojitter.net/api/upload', {
+            fetch('https://nojitter.net/api/upload', {
                 method: 'POST',
                 body: formData,
             })
