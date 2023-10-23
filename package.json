@@ -22,7 +22,7 @@
         "url": ""
     },
     "homepage": "",
-    "dependencies": {
-        "concurrently": "^8.0.1"
+    "devDependencies": {
+        "concurrently": "^8.2.2"
     }
 }
