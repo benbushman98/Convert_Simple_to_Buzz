@@ -26,7 +26,7 @@ app.get('/api/download/:fileName', (req, res) => {
 });
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
-        //callback(null, 'src'); // Define the destination folder for uploaded files
+        // callback(null, 'src'); // Define the destination folder for uploaded files
         callback(null, './server/src'); // Define the destination folder for uploaded files
     },
     filename: (req, file, callback) => {
